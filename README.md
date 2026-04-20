@@ -1,1 +1,5 @@
-# Projeto de CI/CD\n\n## Como rodar\n1. npm install\n2. npm start
+# Projeto de CI/CD
+
+## Como rodar
+1. npm install
+2. npm start
