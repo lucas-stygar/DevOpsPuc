@@ -1,1 +1,13 @@
-{ "name": "projeto-devops-puc", "version": "1.0.0", "dependencies": { "react": "^18.0.0" } }
+{
+  "name": "projeto-devops-puc",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "^18.0.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
