@@ -18,8 +18,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Run Tests
-        run: echo "Testes e validacoes concluidos com sucesso."
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Unit Tests
+        run: npm test
 
   cd:
     needs: ci
