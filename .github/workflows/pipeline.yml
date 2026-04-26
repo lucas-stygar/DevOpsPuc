@@ -3,6 +3,8 @@ name: CI/CD Pipeline
 on:
   pull_request:
     branches: [ "main" ]
+  push:
+    branches: [ "main" ]
 
 jobs:
   ci:
@@ -28,3 +30,11 @@ jobs:
 
       - name: Deploy
         run: echo "Deploy finalizado no ambiente de producao."
+        
+      - name: Discord notification
+        if: always()
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+          severity: info
+          details: "O workflow da Somativa foi executado com sucesso!"
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
